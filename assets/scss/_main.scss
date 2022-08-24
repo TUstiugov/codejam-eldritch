@@ -1,3 +1,173 @@
 .main {
-  flex: 0 1 100%;
+
+  // .main__ancients
+  &__ancients {
+    flex: 0 0 450px;
+    flex-wrap: wrap;
+  }
+
+  // .main__ancient-card
+  &__ancient-card {
+    flex: 0 0 200px;
+    height: 260px;
+    margin: 10px;
+
+    cursor: pointer;
+
+    &.active {
+      border: 2px solid gold;
+    }
+
+    &#azathoth {
+      background: url('./assets/Ancients/Azathoth.png') 0 0 / 100% no-repeat;
+    }
+
+    &#cthulthu {
+      background: url('./assets/Ancients/Cthulthu.png') 0 0 / 100% no-repeat;
+    }
+
+    &#iogsothoth {
+      background: url('./assets/Ancients/IogSothoth.png') 0 0 / 100% no-repeat;
+    }
+
+    &#shubniggurath {
+      background: url('./assets/Ancients/ShubNiggurath.png') 0 0 / 100% no-repeat;
+    }
+  }
+
+  // .main__difficulty
+  &__difficulty {
+    flex-direction: column;
+    flex: 0 0 300px;
+    padding: 0 20px;
+  }
+
+  // .main__difficulty-title
+  &__difficulty-title {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+  }
+
+  // .main__difficulty-buttons
+  &__difficulty-buttons {
+    flex-wrap: wrap;
+    margin: 0 0 1rem 0;
+
+    font-size: 0.8rem;
+  }
+
+  // .main__difficulty-button
+  &__difficulty-button {
+    display: inline-block;
+    flex: 0 0 50%;
+
+    cursor: pointer;
+  }
+
+  // .main__difficulty-shuffle-cards
+  &__difficulty-shuffle-cards {
+    padding: 5px 10px;
+
+    background: #e66b6b;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.1)
+    }
+  }
+
+  // .main__game-field
+  &__game-field {
+    flex: 0 0 450px;
+  }
+}
+
+.game-field {
+  flex-direction: column;
+  align-self: flex-start;
+  padding: 30px 0 0 0;
+
+  // .game-field__stages
+  &__stages {}
+
+  // .game-field__stages-subtitle
+  &__stages-subtitle {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+  }
+
+  // .game-field__stage
+  &__stage {
+    margin: 0 0 15px 0;
+
+    // .game-field__stage_1
+    &_1 {}
+
+    // .game-field__stage_2
+    &_2 {}
+
+    // .game-field__stage_3
+    &_3 {}
+  }
+
+  // .game-field__circle
+  &__circle {
+    position: relative;
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      transform: translate(-50%, -50%);
+    }
+
+    // .game-field__circle_green
+    &_green {
+      background-color: green;
+    }
+
+    // .game-field__circle_brown
+    &_brown {
+      background-color: brown;
+    }
+
+    // .game-field__circle_blue
+    &_blue {
+      background-color: blue;
+    }
+  }
+
+  // .game-field__cards
+  &__cards {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  // .game-field__stack
+  &__stack {
+    flex: 0 0 100px;
+    height: 148px;
+    background-image: url('./assets/mythicCardBackground.png');
+    background-position: 0 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  // .game-field__active-card
+  &__active-card {
+    flex: 0 0 100px;
+    height: 148px;
+    background-image: url('./assets/mythicCardBackground.png');
+    background-position: 0 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
 }

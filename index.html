@@ -17,8 +17,69 @@
       <h2 class="header__sub-title">Хелпер замешивания колоды</h2>
     </header>
 
-    <main class="main">
+    <main class="main flex-container">
+      <div class="main__ancients flex-container">
+        <div class="main__ancient-card active" id="azathoth"></div>
+        <div class="main__ancient-card" id="cthulthu"></div>
+        <div class="main__ancient-card" id="iogsothoth"></div>
+        <div class="main__ancient-card" id="shubniggurath"></div>
+      </div>
 
+      <div class="main__difficulty flex-container">
+        <h2 class="main__difficulty-title">Выберите уровень сложности</h2>
+        <div class="main__difficulty-buttons flex-container">
+          <label class="main__difficulty-button">
+            <input type="radio" name="difficulty" value="very-easy">
+            Очень простой
+          </label>
+          <label class="main__difficulty-button">
+            <input type="radio" name="difficulty" value="easy">
+            Простой
+          </label>
+          <label class="main__difficulty-button">
+            <input type="radio" name="difficulty" value="normal" checked>
+            Нормальный
+          </label>
+          <label class="main__difficulty-button">
+            <input type="radio" name="difficulty" value="hard">
+            Сложный
+          </label>
+          <label class="main__difficulty-button">
+            <input type="radio" name="difficulty" value="very-hard">
+            Очень сложный
+          </label>
+        </div>
+
+        <button class="main__difficulty-shuffle-cards">Перемешать карты</button>
+      </div>
+
+      <div class="main__game-field game-field flex-container">
+        <div class="game-field__stages">
+          <p class="game-field__stages-subtitle">Первая стадия</p>
+          <div class="game-field__stage game-field__stage_1 flex-container">
+            <div class="game-field__circle game-field__circle_green"><span>0</span></div>
+            <div class="game-field__circle game-field__circle_brown"><span>0</span></div>
+            <div class="game-field__circle game-field__circle_blue"><span>0</span></div>
+          </div>
+          <p class="game-field__stages-subtitle">Вторая стадия</p>
+          <div class="game-field__stage game-field__stage_2 flex-container">
+            <div class="game-field__circle game-field__circle_green"><span>0</span></div>
+            <div class="game-field__circle game-field__circle_brown"><span>0</span></div>
+            <div class="game-field__circle game-field__circle_blue"><span>0</span></div>
+          </div>
+          <p class="game-field__stages-subtitle">Третья стадия</p>
+          <div class="game-field__stage game-field__stage_3 flex-container">
+            <div class="game-field__circle game-field__circle_green"><span>0</span></div>
+            <div class="game-field__circle game-field__circle_brown"><span>0</span></div>
+            <div class="game-field__circle game-field__circle_blue"><span>0</span></div>
+          </div>
+        </div>
+
+        <div class="game-field__cards flex-container">
+          <div class="game-field__stack"></div>
+          <div class="game-field__active-card"></div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
