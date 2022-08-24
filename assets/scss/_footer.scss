@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 70px;
+
+  // .footer__copyright
+  &__copyright {}
+
+  // .footer__rss
+  &__rss {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    padding: 5px;
+
+    background: #ffffff url('./assets/images/icons/rs_school_js.svg') 50% 50% / 90% no-repeat;
+    border-radius: 3px;
+    transition: 0.3s;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // .footer__my-git
+  &__my-git {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+
+    background: url('./assets/images/icons/github.svg') 0 0 no-repeat;
+    transition: 0.3s;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

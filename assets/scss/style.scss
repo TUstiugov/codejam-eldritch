@@ -1,6 +1,45 @@
-body {
-  width: 100vw;
-  height: 100vh;
-
-  background: url('../home.png') 0 0 no-repeat;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-size: 20px;
+  color: #cecccc;
+
+  background: #000000 url('./assets/home.png') 0 0 / 100% no-repeat;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1240px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER ===================================================================*/
+@import './header';
+/*===========================================================================*/
+
+
+/* MAIN ===================================================================*/
+@import './main';
+/*===========================================================================*/
+
+
+/* HEADER ===================================================================*/
+@import './footer';
+/*===========================================================================*/

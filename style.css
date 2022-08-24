@@ -1,5 +1,85 @@
-body {
-  width: 100vw;
-  height: 100vh;
-  background: url("../home.png") 0 0 no-repeat;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-size: 20px;
+  color: #cecccc;
+  background: #000000 url("./assets/home.png") 0 0/100% no-repeat;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1240px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER ===================================================================*/
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0 0 50px;
+}
+.header__title {
+  font-size: 2rem;
+}
+.header__sub-title {
+  font-size: 1.5rem;
+}
+
+/*===========================================================================*/
+/* MAIN ===================================================================*/
+.main {
+  flex: 0 1 100%;
+}
+
+/*===========================================================================*/
+/* HEADER ===================================================================*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 70px;
+}
+.footer__rss {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  background: #ffffff url("./assets/images/icons/rs_school_js.svg") 50% 50%/90% no-repeat;
+  border-radius: 3px;
+  transition: 0.3s;
+  transform: scale(1);
+}
+.footer__rss:hover {
+  transform: scale(1.1);
+}
+.footer__my-git {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("./assets/images/icons/github.svg") 0 0 no-repeat;
+  transition: 0.3s;
+  transform: scale(1);
+}
+.footer__my-git:hover {
+  transform: scale(1.2);
+}
+
+/*===========================================================================*/
