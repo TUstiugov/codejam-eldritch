@@ -1,19 +1,24 @@
+import { ancientsData } from "../../data/ancients.js";
 import { countCards } from "./countCards.js";
 import { makeCardsSet } from "./makeCardsSet.js";
-import { makeGameSet } from "./makeGameSet.js";
-import { makeSetMatrix } from "./makeSetMatrix.js";
+import { makeStagesMatrix } from "./makeStagesMatrix.js";
+import { makeGameDeck } from "./makeGameDeck.js";
+import { showStagesMatrix } from "./showStagesMatrix.js";
 
 function startGame(globalState) {
-  const cardsQuantity = countCards(globalState);
+  const ancient = ancientsData[globalState.ancient];
+  const difficulty = globalState.difficulty;
 
-  const cardsSet = makeCardsSet(globalState, cardsQuantity);
+  const cardsQuantity = countCards(ancient);
 
-  const setMatrix = makeSetMatrix(globalState);
+  const cardsDeck = makeCardsSet(difficulty, cardsQuantity);
 
-  const gameSet = makeGameSet(globalState, cardsSet);
+  const stagesMatrix = makeStagesMatrix(ancient);
 
+  const gameDeck = makeGameDeck(cardsDeck, stagesMatrix);
 
-  console.log(gameSet);
+  showStagesMatrix(stagesMatrix);
+
 }
 
 export { startGame };

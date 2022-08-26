@@ -3,33 +3,32 @@ import { greenCardsData } from '../../data/mythicCards/green/index.js';
 import { brownCardsData } from '../../data/mythicCards/brown/index.js';
 import { randomCard } from './randomCard.js';
 
-function makeCardsSet(globalState, cardsQuantity) {
-  const difficult = globalState.difficulty;
+function makeCardsSet(difficulty, cardsQuantity) {
   const cardsSet = {
     blueCards: [],
     greenCards: [],
     brownCards: [],
   };
 
-  if (difficult === 'normal') {
+  if (difficulty === 'normal') {
     cardsSet.blueCards = blueCardsData;
     cardsSet.greenCards = greenCardsData;
     cardsSet.brownCards = brownCardsData;
 
     return cardsSet;
-  } else if (difficult === 'easy') {
+  } else if (difficulty === 'easy') {
     sortCardsWithout(cardsSet, 'hard');
 
     return cardsSet;
-  } else if (difficult === 'hard') {
+  } else if (difficulty === 'hard') {
     sortCardsWithout(cardsSet, 'easy');
 
     return cardsSet;
-  } else if (difficult === 'very-easy') {
+  } else if (difficulty === 'very-easy') {
     sortCardsOnly(cardsSet, 'easy', cardsQuantity);
 
     return cardsSet;
-  } else if (difficult === 'very-hard') {
+  } else if (difficulty === 'very-hard') {
     sortCardsOnly(cardsSet, 'hard', cardsQuantity);
 
     return cardsSet;

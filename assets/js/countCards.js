@@ -1,8 +1,5 @@
-import { ancientsData } from "../../data/ancients.js";
-
-function countCards(obj) {
+function countCards(ancient) {
   const cardsQuantity = {};
-  const ancient = ancientsData[obj.ancient];
 
   cardsQuantity.greenCards = ancient.firstStage.greenCards + ancient.secondStage.greenCards + ancient.thirdStage.greenCards;
 

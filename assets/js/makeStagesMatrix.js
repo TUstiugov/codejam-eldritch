@@ -1,7 +1,4 @@
-import { ancientsData } from "../../data/ancients.js";
-
-function makeSetMatrix(globalState) {
-  const ancient = ancientsData[globalState.ancient];
+function makeStagesMatrix(ancient) {
   const resultMatrix = [[], [], []];
 
   resultMatrix[0].push(ancient.firstStage.greenCards);
@@ -16,8 +13,7 @@ function makeSetMatrix(globalState) {
   resultMatrix[2].push(ancient.thirdStage.brownCards);
   resultMatrix[2].push(ancient.thirdStage.blueCards);
 
-  console.log(resultMatrix);
   return resultMatrix;
 }
 
-export { makeSetMatrix };
+export { makeStagesMatrix };
