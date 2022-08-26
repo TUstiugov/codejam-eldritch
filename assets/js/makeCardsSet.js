@@ -120,9 +120,6 @@ function sortCardsOnly(cardsSet, level, cardsQuantity) {
       cardsSet.brownCards.push(card);
     }
   }
-
-  console.log(cardsQuantity);
-  console.log(cardsSet);
 }
 
 export { makeCardsSet };
