@@ -1,21 +1,29 @@
-import { ancientsData } from '../../data/ancients.js';
 import { randomCard } from './randomCard.js';
 
 function makeGameDeck(cardsDeck, stagesMatrix) {
-  const gameDeck = {
-    firstStage: [],
-    secondStage: [],
-    thirdStage: [],
+  const gameDeck = [[], [], []];
+
+  let greenDeck = cardsDeck.greenCards.sort(() => Math.random() - 0.5);
+  let brownDeck = cardsDeck.brownCards.sort(() => Math.random() - 0.5);
+  let blueDeck = cardsDeck.blueCards.sort(() => Math.random() - 0.5);
+
+  let cardsDeckArray = [greenDeck, brownDeck, blueDeck];
+
+  for (let i = 0; i < stagesMatrix.length; i++) {
+    for (let j = 0; j < stagesMatrix[i].length; j++) {
+      for (let k = 0; k < stagesMatrix[i][j]; k++) {
+        let card;
+
+        do {
+          card = randomCard(cardsDeckArray[j]);
+        } while (gameDeck.flat().includes(card))
+
+        gameDeck[i].push(card);
+      }
+    }
   }
 
-  let greenDeck = cardsDeck.greenCards;
-  let brownDeck = cardsDeck.brownCards;
-  let blueDeck = cardsDeck.blueCards;
-
-  // console.log(greenDeck);
-  // console.log(brownDeck);
-  // console.log(blueDeck);
-
+  return gameDeck;
 }
 
 export { makeGameDeck };

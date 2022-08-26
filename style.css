@@ -126,6 +126,9 @@ input {
   align-self: flex-start;
   padding: 30px 0 0 0;
 }
+.game-field__stages {
+  margin: 0 0 30px 0;
+}
 .game-field__stages-subtitle {
   margin: 0 0 5px 0;
   font-size: 1rem;
@@ -166,6 +169,12 @@ input {
   background-position: 0 0;
   background-size: 100%;
   background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+}
+.game-field__stack.visible {
+  opacity: 1;
+  visibility: visible;
 }
 .game-field__active-card {
   flex: 0 0 100px;
@@ -174,6 +183,12 @@ input {
   background-position: 0 0;
   background-size: 100%;
   background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+}
+.game-field__active-card.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*===========================================================================*/

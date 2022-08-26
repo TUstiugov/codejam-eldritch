@@ -19,6 +19,8 @@ function startGame(globalState) {
 
   showStagesMatrix(stagesMatrix);
 
+  console.log(gameDeck);
+
 }
 
 export { startGame };
