@@ -4,7 +4,7 @@ import { makeCardsSet } from "./makeCardsSet.js";
 import { makeStagesMatrix } from "./makeStagesMatrix.js";
 import { makeGameDeck } from "./makeGameDeck.js";
 import { showStagesMatrix } from "./showStagesMatrix.js";
-import { showCard } from "./showCard.js";
+import { changeCards } from "./changeCards.js";
 
 function startGame(globalState) {
   const ancient = ancientsData[globalState.ancient];
@@ -26,7 +26,7 @@ function startGame(globalState) {
 
   showStagesMatrix(stagesMatrix);
 
-  showCard(gameDeck);
+  changeCards(gameDeck, stagesMatrix, deck, activeCard);
 
   console.log(gameDeck);
 

@@ -1,7 +1,4 @@
-function showCard(gameDeck) {
-  const deck = document.querySelector('.game-field__stack');
-  const activeCard = document.querySelector('.game-field__active-card');
-
+function showCard(gameDeck, deck, activeCard) {
   const flatGameDeck = gameDeck.flat();
 
   if (gameDeck.length === 1) {
