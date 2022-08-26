@@ -171,6 +171,7 @@ input {
   background-repeat: no-repeat;
   opacity: 0;
   visibility: hidden;
+  cursor: pointer;
 }
 .game-field__stack.visible {
   opacity: 1;

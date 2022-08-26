@@ -163,6 +163,7 @@
     background-repeat: no-repeat;
     opacity: 0;
     visibility: hidden;
+    cursor: pointer;
 
     &.visible {
       opacity: 1;

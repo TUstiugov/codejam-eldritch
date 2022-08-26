@@ -23,6 +23,10 @@ function makeGameDeck(cardsDeck, stagesMatrix) {
     }
   }
 
+  gameDeck.forEach((stage) => {
+    stage = stage.sort(() => Math.random() - 0.5);
+  });
+
   return gameDeck;
 }
 
