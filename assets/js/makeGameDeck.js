@@ -1,4 +1,5 @@
 import { randomCard } from './randomCard.js';
+import { removeCard } from './removeCard.js';
 
 function makeGameDeck(cardsDeck, stagesMatrix) {
   const gameDeck = [[], [], []];
@@ -12,13 +13,11 @@ function makeGameDeck(cardsDeck, stagesMatrix) {
   for (let i = 0; i < stagesMatrix.length; i++) {
     for (let j = 0; j < stagesMatrix[i].length; j++) {
       for (let k = 0; k < stagesMatrix[i][j]; k++) {
-        let card;
-
-        do {
-          card = randomCard(cardsDeckArray[j]);
-        } while (gameDeck.flat().includes(card))
+        let card = randomCard(cardsDeckArray[j]);
 
         gameDeck[i].push(card);
+
+        removeCard(card, cardsDeckArray);
       }
     }
   }

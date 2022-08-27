@@ -22,14 +22,11 @@ function startGame(globalState) {
 
   const stagesMatrix = makeStagesMatrix(ancient);
 
-  const gameDeck = makeGameDeck(cardsDeck, stagesMatrix);
-
   showStagesMatrix(stagesMatrix);
 
+  const gameDeck = makeGameDeck(cardsDeck, stagesMatrix);
+
   changeCards(gameDeck, stagesMatrix, deck, activeCard);
-
-  console.log(gameDeck);
-
 }
 
 export { startGame };
