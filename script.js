@@ -5,6 +5,7 @@ import { activateShuffleButton } from "./assets/js/activateShuffleButton.js";
 const globalState = {
   ancient: 'azathoth',
   difficulty: 'normal',
+  isPlayed: false,
 };
 
 activateAncient(globalState);

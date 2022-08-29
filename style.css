@@ -117,6 +117,14 @@ input {
 .main__difficulty-shuffle-cards:hover {
   transform: scale(1.1);
 }
+.main__difficulty-shuffle-cards.disable {
+  color: grey;
+  background: #912020;
+  cursor: auto;
+}
+.main__difficulty-shuffle-cards.disable:hover {
+  transform: scale(1);
+}
 .main__game-field {
   flex: 0 0 450px;
 }

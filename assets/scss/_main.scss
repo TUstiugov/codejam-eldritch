@@ -77,6 +77,16 @@
     &:hover {
       transform: scale(1.1)
     }
+
+    &.disable {
+      color: grey;
+      background: #912020;
+      cursor: auto;
+
+      &:hover {
+        transform: scale(1);
+      }
+    }
   }
 
   // .main__game-field

@@ -1,7 +1,7 @@
 import { showCard } from './showCard.js';
 import { showStagesMatrix } from './showStagesMatrix.js';
 
-function changeCards(gameDeck, stagesMatrix, deck, activeCard) {
+function changeCards(gameDeck, stagesMatrix, deck, activeCard, shuffleButton, globalState) {
   let flatGameDeck = gameDeck.flat();
 
   const listener = () => {
@@ -48,6 +48,10 @@ function changeCards(gameDeck, stagesMatrix, deck, activeCard) {
     if (flatGameDeck.length === 0) {
       deck.classList.remove('visible');
       deck.removeEventListener('click', listener);
+
+      shuffleButton.classList.remove('disable');
+
+      globalState.isPlayed = false;
     }
   }
 

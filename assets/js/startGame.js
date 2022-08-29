@@ -12,9 +12,11 @@ function startGame(globalState) {
 
   const deck = document.querySelector('.game-field__stack');
   const activeCard = document.querySelector('.game-field__active-card');
+  const shuffleButton = document.querySelector('.main__difficulty-shuffle-cards');
 
   deck.classList.add('visible');
   activeCard.classList.remove('visible');
+  shuffleButton.classList.add('disable');
 
   const cardsQuantity = countCards(ancient);
 
@@ -26,7 +28,7 @@ function startGame(globalState) {
 
   const gameDeck = makeGameDeck(cardsDeck, stagesMatrix);
 
-  changeCards(gameDeck, stagesMatrix, deck, activeCard);
+  changeCards(gameDeck, stagesMatrix, deck, activeCard, shuffleButton, globalState);
 }
 
 export { startGame };
